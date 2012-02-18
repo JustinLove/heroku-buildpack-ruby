@@ -48,7 +48,7 @@ private
 
           puts "Running: rake assets:precompile"
           rake_output = ""
-          rake_output << run("env PATH=$PATH:bin bundle exec rake assets:precompile 2>&1")
+          rake_output << run("env PATH=$PATH:bin bundle exec rake assets:precompile --trace 2>&1")
           puts rake_output
 
           if $?.success?
